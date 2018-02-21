@@ -1,3 +1,8 @@
+Please check out develop branch
+```
+git checkout -b develop origin/develop
+```
+
 # rest-api-development
 
 CS5331 Assignment 1 Project Reference Repository
