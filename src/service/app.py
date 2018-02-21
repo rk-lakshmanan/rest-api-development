@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Remember to update this list
-ENDPOINT_LIST = ['/', '/meta/heartbeat', '/meta/members']
+ENDPOINT_LIST = ['/', '/meta/heartbeat', '/meta/members', '/meta/all']
 
 def make_json_response(data, status=True, code=200):
     """Utility function to create the JSON responses."""
@@ -58,4 +58,4 @@ if __name__ == '__main__':
     os.chdir(dname)
 
     # Run the application
-    app.run(debug=False, port=8080, host="0.0.0.0")
+    app.run(debug=True, port=8080, host="0.0.0.0")
