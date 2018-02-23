@@ -169,7 +169,6 @@ def user_authenticate():
 # Remember to update this list
 ENDPOINT_LIST = ['/', '/meta/heartbeat', '/meta/members', '/users']
 
-
 def make_json_response(data, status=True, code=200):
     """Utility function to create the JSON responses."""
 
