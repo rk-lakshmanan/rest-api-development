@@ -3,6 +3,12 @@ Please check out develop branch
 git checkout -b develop origin/develop
 ```
 
+Init database
+```
+from app import db
+db.create_all()
+```
+
 # rest-api-development
 
 CS5331 Assignment 1 Project Reference Repository
