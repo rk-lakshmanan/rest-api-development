@@ -1,11 +1,18 @@
 #!/usr/bin/python
 
-from flask import Flask
+from flask import Flask,render_template
 from flask_cors import CORS
 import json
 import os
 
-app = Flask(__name__)
+# app = Flask(__name__)
+ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../html/templates')
+STATIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../html/static/')
+
+# ASSETS_DIR =  './html/'
+# STATIC_DIR = './html/static/'
+# print(ASSETS_DIR)
+app = Flask(__name__, template_folder=ASSETS_DIR, static_folder=STATIC_DIR)
 # Enable cross origin sharing for all endpoints
 CORS(app)
 
@@ -35,6 +42,17 @@ def make_json_response(data, status=True, code=200):
 def index():
     """Returns a list of implemented endpoints."""
     # return make_json_response(ENDPOINT_LIST)
+    # INDEX_PATH = os.path.join(ASSETS_DIR,'index.html')
+    # print(INDEX_PATH)
+    # print(os.path.isfile(INDEX_PATH))
+    # # print(STATIC_DIR)
+    # # print(ASSETS_DIR)
+    # mypath = os.path.abspath(__file__)
+    # print(mypath)
+    # print(app.instance_path)
+    print()
+    print()
+
     return render_template('index.html')
 
 
