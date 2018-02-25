@@ -34,7 +34,8 @@ def make_json_response(data, status=True, code=200):
 @app.route("/")
 def index():
     """Returns a list of implemented endpoints."""
-    return make_json_response(ENDPOINT_LIST)
+    # return make_json_response(ENDPOINT_LIST)
+    return render_template('index.html')
 
 
 @app.route("/meta/heartbeat")
