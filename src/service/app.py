@@ -41,7 +41,7 @@ def make_json_response(data, status=True, code=200):
 @app.route("/")
 def index():
     """Returns a list of implemented endpoints."""
-    # return make_json_response(ENDPOINT_LIST)
+    return make_json_response(ENDPOINT_LIST)
     # INDEX_PATH = os.path.join(ASSETS_DIR,'index.html')
     # print(INDEX_PATH)
     # print(os.path.isfile(INDEX_PATH))
@@ -50,10 +50,10 @@ def index():
     # mypath = os.path.abspath(__file__)
     # print(mypath)
     # print(app.instance_path)
-    print()
-    print()
+    # print()
+    # print()
 
-    return render_template('index.html')
+    # return render_template('index.html')
 
 
 @app.route("/meta/heartbeat")
