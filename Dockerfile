@@ -7,7 +7,7 @@ RUN pip install -U flask
 RUN pip install -U flask-cors
 
 RUN apt-get -y install curl
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 RUN npm -g install bower
 
