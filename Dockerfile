@@ -8,9 +8,9 @@ RUN pip install -U flask-cors
 
 RUN apt-get -y install curl
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN apt-get install -y nodejs
 RUN npm -g bower
 
-RUN apt-get install -y nodejs
 RUN echo "ServerName localhost  " >> /etc/apache2/apache2.conf
 RUN echo "$user     hard    nproc       20" >> /etc/security/limits.conf
 ADD ./src/service /service
